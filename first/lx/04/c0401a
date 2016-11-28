@@ -1,0 +1,34 @@
+#coding:UTF8
+import sys
+import os
+
+def get_file(f):
+    if os.path.isfile(f):
+        return  f
+    elif os.path.isdir(f):
+        print "%s is dir" %f
+        #sys.exit()
+    else:
+        print "%s not file" % f
+        #sys.exit()
+
+def get_content(file):
+    try:
+        with open(file,'r') as fd :
+            while True:
+                data = fd.read(1024)
+                if data :
+                    print data,
+                else:
+                    break
+    except TypeError:
+        print "coercing to Unicode: need string or buffer, NoneType found"
+        sys.exit()
+
+if __name__ == '__main__':
+    try:
+        f = get_file(sys.argv[1])
+    except IndexError:
+        print '%s follow argv' %__file__
+        sys.exit()
+    get_content(f)
