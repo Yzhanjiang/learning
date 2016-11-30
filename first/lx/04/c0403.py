@@ -1,3 +1,7 @@
+#收集主机mac地址。提示使用tcpdump -nn -i eth0 port 68 -l
+#应用环境，在kickstart集中部署时使用
+
+
 #coding:UTF8
 
 from subprocess import Popen,PIPE
