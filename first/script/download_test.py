@@ -1,4 +1,5 @@
 #coding:utf-8
+#在当前目录创建N进程，并发下载
 import urllib 
 import threading
 import urllib2 
