@@ -73,5 +73,21 @@ k.pop('address')
 k.pop('sex')
 print(k)
 
+print('*'*30)
+l = ['a','b','c','d']
+m = {}
+n = m.fromkeys(l,123)
+print(n)
+l1 = ['a','b','c','d']
+l2 = [1,2,3,4]
+l3 = dict(zip(l1,l2))
 
-
+print(l3)
+print(k)
+k.update(l3)
+print(k)
+#字典排序
+mm = dict(a=1,b=10,c=3,d=9)
+print(mm)
+ww = sorted(mm.iteritems(),key = lambda d:d[0],reverse=True)
+print(ww)
